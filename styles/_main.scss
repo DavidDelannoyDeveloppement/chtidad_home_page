@@ -19,16 +19,20 @@ body {
 
 
 main {
-    padding-top: 1vw;
 
     .title {
         text-align: center;
-        color: white;
+        color: $color-ddd;
         font-family: $font-Parisienne;
         font-weight: 100;
-        font-size:5vw;
+        font-size:4vw;
+        margin-bottom: 0.8vw;
         @media screen and (max-width: 600px) {
-            font-size: 8vw;
+            font-size: 5vw;
+            margin-bottom: 2vw;
+        }
+        span {
+            font-size: 6.5vw
         }
     }
 
@@ -36,13 +40,8 @@ main {
         @include flex-center;
         justify-content: center;
         flex-wrap: wrap;
-        // width: 100%;
-        // height: 100%;
-        margin-top:2em;
         margin-bottom: 2em;
-        gap: 7vw;
-        // background-color: rgb(185, 13, 13);
-    
+        gap: 6vw;
     
         .box-full{
             display: flex;
@@ -114,6 +113,15 @@ main {
                 border: 2px solid rgb(31, 31, 31);
                 border-radius: 5px;
                 object-fit:cover;
+                }
+                h2 {
+                    vertical-align: middle;
+                    font-family: $font-Parisienne;
+                    font-size: 1.3vw;
+                    color: rgb(31, 31, 31);
+                    padding-left: 0.5vw;
+                    @media screen and (max-width: 600px) {font-size: 2vw;    
+                    }
                 }
             }
 

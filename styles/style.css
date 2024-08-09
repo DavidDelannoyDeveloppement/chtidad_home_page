@@ -15,20 +15,22 @@ body {
   background-color: rgb(31, 31, 31);
 }
 
-main {
-  padding-top: 1vw;
-}
 main .title {
   text-align: center;
-  color: white;
+  color: rgb(255, 120, 0);
   font-family: "Parisienne", cursive;
   font-weight: 100;
-  font-size: 5vw;
+  font-size: 4vw;
+  margin-bottom: 0.8vw;
 }
 @media screen and (max-width: 600px) {
   main .title {
-    font-size: 8vw;
+    font-size: 5vw;
+    margin-bottom: 2vw;
   }
+}
+main .title span {
+  font-size: 6.5vw;
 }
 main .container {
   display: flex;
@@ -36,9 +38,8 @@ main .container {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 2em;
   margin-bottom: 2em;
-  gap: 7vw;
+  gap: 6vw;
 }
 main .container .box-full {
   display: flex;
@@ -111,6 +112,18 @@ main .container .box-empty .support img {
   border-radius: 5px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+main .container .box-empty .support h2 {
+  vertical-align: middle;
+  font-family: "Parisienne", cursive;
+  font-size: 1.3vw;
+  color: rgb(31, 31, 31);
+  padding-left: 0.5vw;
+}
+@media screen and (max-width: 600px) {
+  main .container .box-empty .support h2 {
+    font-size: 2vw;
+  }
 }
 
 /*§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§*/
