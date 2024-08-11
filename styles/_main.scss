@@ -21,6 +21,7 @@ body {
 main {
 
     .title {
+        animation: bounce 5s infinite ease-in-out;
         text-align: center;
         color: $color-ddd;
         font-family: $font-Parisienne;
@@ -34,7 +35,19 @@ main {
         span {
             font-size: 6.5vw
         }
+
     }
+    @keyframes bounce {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
 
     .container {
         @include flex-center;
@@ -130,17 +143,6 @@ main {
 }
 
 
-/*§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§*/
-/*Main layout*/
-
-
-/*§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§*/
-/* customization of container */
-
-
-/*§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§*/
-/*Footer*/
-
 .auteur { 
     font-size: 1vw; 
     text-align: center;
@@ -164,4 +166,4 @@ main {
         font-size: 2vw;
     }
 }
-
+.ddd:hover { color: white;}
