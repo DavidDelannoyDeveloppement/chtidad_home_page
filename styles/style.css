@@ -138,6 +138,7 @@ main .container .box-empty .support h2 {
 }
 
 .auteur {
+  margin-top: 1vw;
   font-size: 1vw;
   text-align: center;
   color: white;
