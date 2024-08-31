@@ -138,10 +138,22 @@ main .container .box-empty .support h2 {
 }
 
 .auteur {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-top: 1vw;
   font-size: 1vw;
   text-align: center;
   color: white;
+}
+.auteur .iframe-support {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.auteur .iframe-support iframe {
+  margin-bottom: 1vw;
 }
 .auteur a {
   text-decoration: none;

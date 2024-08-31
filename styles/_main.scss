@@ -144,11 +144,19 @@ main {
 
 
 .auteur {
+    @include flex-center-column;
     margin-top: 1vw; 
     font-size: 1vw; 
     text-align: center;
     color: white;
+    
+    .iframe-support {
+        @include flex-center;
 
+        iframe {
+            margin-bottom: 1vw;
+        }
+    }
 
     a {
         text-decoration: none;
@@ -168,3 +176,4 @@ main {
     }
 }
 .ddd:hover { color: white;}
+
