@@ -149,15 +149,10 @@ main {
     font-size: 1vw; 
     text-align: center;
     color: white;
-    
-    .iframe-support {
-        @include flex-center;
 
-        iframe {
-            margin-bottom: 1vw;
-        }
+    iframe {
+        margin-bottom: 1vw;
     }
-
     a {
         text-decoration: none;
     }

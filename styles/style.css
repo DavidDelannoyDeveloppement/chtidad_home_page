@@ -147,12 +147,7 @@ main .container .box-empty .support h2 {
   text-align: center;
   color: white;
 }
-.auteur .iframe-support {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.auteur .iframe-support iframe {
+.auteur iframe {
   margin-bottom: 1vw;
 }
 .auteur a {
