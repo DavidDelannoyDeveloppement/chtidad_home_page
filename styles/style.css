@@ -7,10 +7,8 @@
 body {
   display: flex;
   flex-direction: column;
-  justify-content: start;
   align-items: center;
-  max-width: 100vw;
-  min-height: 100vh;
+  height: 100vh;
   background-color: rgb(31, 31, 31);
 }
 
@@ -35,7 +33,10 @@ body {
 
 main {
   display: flex;
-  flex-direction: row;
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  padding: 1vw;
 }
 @keyframes bounce {
   0% {
@@ -49,117 +50,79 @@ main {
   }
 }
 main .container-left {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10vw, 1fr));
+  grid-auto-rows: 12vw;
   justify-content: center;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 2em;
-  gap: 3vw;
+  align-content: space-evenly;
   width: 50%;
+  height: 100%;
+  gap: 2vw;
+  overflow-y: auto;
 }
-main .container-left .box-full {
+main .container-left .box-full,
+main .container-left .box-empty {
+  width: 10vw;
+  height: 12vw;
+  background-color: white;
+  border-radius: 5px;
+  padding: 0.5vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  background-color: white;
-  border-radius: 5px;
-  padding: 0.5vw;
-  width: 10vw;
-  height: 12vw;
   text-decoration: none;
 }
-@media screen and (max-width: 600px) {
-  main .container-left .box-full {
-    width: 20vw;
-    height: 24vw;
-  }
-}
-main .container-left .box-full .support {
-  width: 100%;
-  height: 80%;
-}
-main .container-left .box-full .support img {
-  width: 100%;
-  height: 100%;
-  border: 2px solid rgb(31, 31, 31);
-  border-radius: 5px;
-}
-main .container-left .box-full .support h2 {
-  vertical-align: middle;
-  font-family: "Parisienne", cursive;
-  font-size: 1.3vw;
-  color: rgb(31, 31, 31);
-  padding-left: 0.5vw;
-}
-@media screen and (max-width: 600px) {
-  main .container-left .box-full .support h2 {
-    font-size: 2vw;
-  }
-}
-main .container-left .box-full:hover {
-  transform: scale(1.1);
-  transition: transform 0.2s;
-}
-main .container-left .box-empty {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: white;
-  border-radius: 5px;
-  padding: 0.5vw;
-  width: 10vw;
-  height: 12vw;
-}
-@media screen and (max-width: 600px) {
-  main .container-left .box-empty {
-    width: 20vw;
-    height: 24vw;
-  }
-}
+main .container-left .box-full .support,
 main .container-left .box-empty .support {
   width: 100%;
-  height: 80%;
+  height: 100%;
 }
+main .container-left .box-full .support img,
 main .container-left .box-empty .support img {
   width: 100%;
-  height: 100%;
-  border: 2px solid rgb(31, 31, 31);
-  border-radius: 5px;
+  height: 80%;
   -o-object-fit: cover;
      object-fit: cover;
+  border: 2px solid rgb(31, 31, 31);
+  border-radius: 5px;
 }
+main .container-left .box-full .support h2,
 main .container-left .box-empty .support h2 {
-  vertical-align: middle;
   font-family: "Parisienne", cursive;
   font-size: 1.3vw;
   color: rgb(31, 31, 31);
   padding-left: 0.5vw;
 }
 @media screen and (max-width: 600px) {
+  main .container-left .box-full .support h2,
   main .container-left .box-empty .support h2 {
     font-size: 2vw;
   }
 }
-
-.container-right {
+main .container-left .box-full:hover,
+main .container-left .box-empty:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease-in-out;
+}
+main .container-right {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 1vw;
-  font-size: 1vw;
-  text-align: center;
-  color: white;
   width: 50%;
+  height: 100%;
+  padding-left: 1vw;
 }
-.container-right iframe {
-  margin-bottom: 1vw;
+main .container-right iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
 footer {
   color: white;
+  padding: 1vw;
 }
 footer a {
   text-decoration: none;
@@ -169,11 +132,6 @@ footer a .ddd {
   color: rgb(255, 120, 0);
   text-decoration: none;
   font-family: "Monotype Corsiva", "Parisienne", cursive;
-}
-@media screen and (max-width: 600px) {
-  footer a .ddd {
-    font-size: 2vw;
-  }
 }
 @media screen and (max-width: 600px) {
   footer a .ddd {
