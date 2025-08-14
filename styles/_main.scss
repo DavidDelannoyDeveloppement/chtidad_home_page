@@ -9,7 +9,7 @@ body {
   flex-direction: column;
   align-items: center;
   height: 100vh;
-  background-color: rgb(31, 31, 31);
+  background-color: black;
 }
 
 @mixin flex-center {
@@ -25,24 +25,43 @@ body {
   align-items: center;
 }
 
-.title {
-  animation: bounce 5s infinite ease-in-out;
-  text-align: center;
-  color: $color-ddd;
-  font-family: $font-Parisienne;
-  font-weight: 100;
-  font-size: 4vw;
-  margin-bottom: 0.8vw;
 
-  @media screen and (max-width: 600px) {
-    font-size: 5vw;
-    margin-bottom: 2vw;
+header {
+  display: flex;
+  align-items: center;
+  // justify-content: space-between;
+  margin-top: 1rem;
+
+  .title {
+    animation: bounce 5s infinite ease-in-out;
+    text-align: center;
+    color: $color-ddd;
+    font-family: $font-Parisienne;
+    font-weight: 100;
+    font-size: 4vw;
+    padding: 0 20% 0 25%;
+
+    @media screen and (max-width: 600px) {
+      font-size: 5vw;
+      margin-bottom: 2vw;
+    }
+
+    span {
+      font-size: 6.5vw;
+    }
   }
 
-  span {
-    font-size: 6.5vw;
+  .img-logo {
+    width: 10%;
+    height: auto;
   }
 }
+
+
+
+
+
+
 
 main {
     display: flex;
