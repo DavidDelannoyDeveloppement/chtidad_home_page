@@ -29,7 +29,8 @@ body {
 header {
   display: flex;
   align-items: center;
-  // justify-content: space-between;
+  justify-content: center;
+  gap:5rem;
   margin-top: 1rem;
 
   .title {
@@ -39,7 +40,7 @@ header {
     font-family: $font-Parisienne;
     font-weight: 100;
     font-size: 4vw;
-    padding: 0 20% 0 25%;
+    // padding: 0 5% 0 20%;
 
     @media screen and (max-width: 600px) {
       font-size: 5vw;
